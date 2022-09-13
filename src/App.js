@@ -1,4 +1,5 @@
 import "./App.css";
+
 import PizzaList from "./components/PizzaList"; //9)importar el componente
 
 function App() {

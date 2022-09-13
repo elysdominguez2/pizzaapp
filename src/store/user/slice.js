@@ -7,6 +7,7 @@ import { createSlice } from "@reduxjs/toolkit";
 const initialState = {
   name: "Helva",
   id: 42,
+  favorites: [67283, 357311], //20)Agrego los favortos, aca los hardcoreo por ahora
 };
 
 export const userSlice = createSlice({

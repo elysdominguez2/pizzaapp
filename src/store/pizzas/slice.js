@@ -37,10 +37,25 @@ const initialState = {
 export const pizzaSlice = createSlice({
   name: "pizzas",
   initialState,
-  reducers: {},
+  reducers: {
+    addPizza: (state, action) => {
+      //19)agrego el action
+      // 17)Agregué este addPizza porque tengo que pasar la data de la pizza que agregue nueva desde los inputs a mi antigua data, estos pasos ya los saco del apunte de papel del paso 11) ACA sigo el paso 18)en PizzaForm
+      console.log("hello from the reducer"); //19)pongo este consolo.log para chequearme en la consola que se esta comunicando, se esta imprimiendo y ahora puedo aca mismo agregar la logica
+      const { name, description, image } = action.payload; // 19)agregue esta linea y toda la constante de la newPizza <--- Sigue en el paso 20)Agregar favoritos en el Slice.js(USER)
+      const newPizza = {
+        id: Math.floor(Math.random() * 1000),
+        name,
+        description,
+        bought: 0,
+        image,
+      };
+      state.allPizzas.push(newPizza);
+    },
+  },
 });
 
-export const {} = pizzaSlice.actions;
+export const { addPizza } = pizzaSlice.actions;
 
 export default pizzaSlice.reducer;
 
