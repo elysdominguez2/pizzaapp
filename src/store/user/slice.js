@@ -19,7 +19,7 @@ export const userSlice = createSlice({
       //22)Agregando una new case al reducer e importandolo abajo, recordar que esto esta en el paso 11 de mis papeles <-- Sigue en paso 23) en PizzaList
       console.log("Hello from userReducer", action); //25)este console.log chequea como explico arriba.
       console.log("state", current(state)); //26)si quiero hacer console.log del STATE debo poner current(state) e importarlo arriba como se ve junto con el createSlice, esto es para chequear que hay dentro del state
-      //26)Ahora creo la lógica para agregar o sacar el corazon de favorito aca abajo y LEE porque esta comentado el newFavoriteArray en la misma funcio comentada
+      //26)Ahora aca abajo creo la lógica para agregar o sacar el corazon de favorito aca abajo y LEE porque esta comentado el newFavoriteArray en la misma funcio comentada
       const id = action.payload;
 
       // const newFavoritesArray = state.user.favorites.includes(id) ? state.user.favorites.filter(favoriteId => favoriteId !== id) : [...state.user.favorites, id];//26)Esta la comenté para que me de cuenta que NO hay que usar .user(comparar las dos constantes, una lo tiene y la otra no, YA estoy dentro de USER por eso no lo llamo, eso lo hago en los SELECTORS porque estoy fuera del state)
