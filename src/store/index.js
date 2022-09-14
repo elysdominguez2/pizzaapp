@@ -4,11 +4,13 @@
 import { configureStore } from "@reduxjs/toolkit";
 import userReducer from "./user/slice";
 import pizzasReducer from "./pizzas/slice";
+import restaurantReducer from "./restaurants/slice";
 
 const store = configureStore({
   reducer: {
     pizzas: pizzasReducer,
     user: userReducer,
+    restaurants: restaurantReducer, //35) Agrego este Reducer y arriba lo  importo, sigue el paso 36) con el archivo de RESTAURANTS/SELECTORS.js
   },
 });
 

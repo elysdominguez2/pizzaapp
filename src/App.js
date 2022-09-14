@@ -1,6 +1,7 @@
 import "./App.css";
 
 import PizzaList from "./components/PizzaList"; //9)importar el componente
+import RestaurantList from "./components/RestaurantList";
 
 function App() {
   return (
@@ -12,6 +13,8 @@ function App() {
 
       {/* 9) que continua del componente PizzaList.js, ver ahi, aca agrego el componente y chequeo que se importe arriba tambien - el 10) continua nuevamente en PizzaList.js */}
       <PizzaList />
+      <RestaurantList />
+      {/* 33)Agregamos RestaurantList aca arriba y lo importo ahora voy al 34) en RestaurantList.js */}
     </div>
   );
 }
